@@ -10,3 +10,11 @@
     flex-direction: column;
     width: 100%;
 }
+
+.container {
+    display: flex;
+
+    // @include big-screen {
+    //     flex-direction: column;
+    // }
+}

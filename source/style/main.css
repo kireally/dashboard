@@ -384,6 +384,10 @@ a {
   width: 100%;
 }
 
+.container {
+  display: flex;
+}
+
 .navigation {
   position: sticky;
   left: 0;
@@ -670,7 +674,7 @@ a {
   color: #e0425b;
 }
 
-.header .daily-up, .header .daily-down {
+.daily-up, .daily-down {
   position: relative;
   margin-left: 10px;
   font-size: calc(11px + 0.1vw);
@@ -679,7 +683,7 @@ a {
   font-size: 10px;
 }
 
-.header .daily-up::before {
+.daily-up::before {
   content: '';
   position: absolute;
   left: -7px;
@@ -691,7 +695,7 @@ a {
   border-bottom: 5px solid #a889e9;
 }
 
-.header .daily-down::before {
+.daily-down::before {
   content: '';
   position: absolute;
   left: -7px;
@@ -701,4 +705,141 @@ a {
   border-left: 3px solid transparent;
   border-right: 3px solid transparent;
   border-top: 5px solid #fd5670;
+}
+
+.shadow {
+  margin: 10px;
+  box-shadow: 0 0 10px 5px #cfcece;
+}
+
+.title {
+  font-size: calc(12px + 0.15vw);
+  font-weight: 700;
+  color: #767676;
+  padding: 30px 0 0 30px;
+}
+
+.title--center {
+  padding-left: 0;
+  text-align: center;
+}
+
+.main {
+  max-width: 1030px;
+  width: 100%;
+  padding: 10px;
+  background-color: #ebebeb;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.main__top-container {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .main__top-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.main__bottom-container {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .main__bottom-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.main__monthly-progress {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-grow: 10;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 266px;
+  background-color: white;
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .main__monthly-progress {
+    width: 90%;
+  }
+}
+
+.main__mothly-buttons {
+  padding-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .main__mothly-buttons {
+    display: none;
+  }
+}
+
+.main__mothly-button {
+  font-size: calc(11px + 0.1vw);
+  font-weight: 400;
+  color: #bfbfbf;
+  font-family: 'Lato', sans-serif;
+  font-size: 10px;
+  margin: 0 8px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+}
+
+.main__mothly-button:last-child {
+  margin-right: 60px;
+}
+
+.main__mothly-button:hover {
+  color: white;
+  background: linear-gradient(to right, #e0425b, #db5c46);
+}
+
+.main__monthly-img {
+  margin-left: 30px;
+}
+
+.main__revenue {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 264px;
+  height: 266px;
+  background: url(../img/main/revenue-per-our.png) white no-repeat center;
+}
+
+@media (max-width: 768px) {
+  .main__revenue {
+    width: 90%;
+  }
+}
+
+.main__revenue-amount {
+  padding-bottom: 30px;
 }

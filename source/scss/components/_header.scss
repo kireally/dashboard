@@ -2,8 +2,8 @@
     max-width: 1296px;
     width: 100%;
 
-/*Header__user(top container) ====
-==================================*/
+    /*Header__user(top container) ====
+    ==================================*/
 
     &__user {
         display: flex;
@@ -135,6 +135,52 @@
     &__user-position {
         @include primary-font;
         font-size: $position-text;
+    }
+
+    /*Header__daily(bottom container) =
+    ==================================*/
+
+    &__daily {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    &__daily-list {
+        @include flexible(row, space-around, center);
+        width: 1296px;
+        height: 100px;
+    }
+
+    &__daily-item {
+        margin: 0 35px;
+    }
+
+    &__daily-title {
+        @include title-font;
+        font-size: $primary-text;
+    }
+
+    &__daily-item:last-child > &__daily-title {
+        color: $main-gradient-color;
+    }
+
+    &__daily-amount {
+        @include amount-font;
+    }
+
+    .daily-up,.daily-down {
+        position: relative;
+        margin-left: 10px;
+        @include primary-font;
+        font-size: 10px;
+    }
+
+    .daily-up::before {
+        @include triangle-up;
+    }
+    
+    .daily-down::before {
+        @include triangle-down;
     }
 
 

@@ -369,6 +369,8 @@ a {
  ==================================*/
 /*Flex  ==========================
   ==================================*/
+/*Triangles  =======================
+  ==================================*/
 .wrapper {
   display: flex;
   max-width: 1366px;
@@ -469,7 +471,9 @@ a {
   max-width: 1296px;
   width: 100%;
   /*Header__user(top container) ====
-==================================*/
+    ==================================*/
+  /*Header__daily(bottom container) =
+    ==================================*/
 }
 
 .header__user {
@@ -623,4 +627,72 @@ a {
   font-weight: 400;
   color: #bfbfbf;
   font-size: 10px;
+}
+
+.header__daily {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.header__daily-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 1296px;
+  height: 100px;
+}
+
+.header__daily-item {
+  margin: 0 35px;
+}
+
+.header__daily-title {
+  font-size: calc(12px + 0.15vw);
+  font-weight: 700;
+  color: #767676;
+  font-size: calc(11px + 0.1vw);
+}
+
+.header__daily-item:last-child > .header__daily-title {
+  color: #e0425b;
+}
+
+.header__daily-amount {
+  font-size: calc(16px + 0.4vw);
+  font-weight: 700;
+  color: #e0425b;
+}
+
+.header .daily-up, .header .daily-down {
+  position: relative;
+  margin-left: 10px;
+  font-size: calc(11px + 0.1vw);
+  font-weight: 400;
+  color: #bfbfbf;
+  font-size: 10px;
+}
+
+.header .daily-up::before {
+  content: '';
+  position: absolute;
+  left: -7px;
+  bottom: 2px;
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-bottom: 5px solid #a889e9;
+}
+
+.header .daily-down::before {
+  content: '';
+  position: absolute;
+  left: -7px;
+  bottom: 3px;
+  width: 0;
+  height: 0;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-top: 5px solid #fd5670;
 }

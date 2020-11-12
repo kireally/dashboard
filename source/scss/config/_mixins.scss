@@ -54,3 +54,31 @@
     justify-content: $justify-content;
     align-items: $align-items;
   }
+
+  /*Triangles  =======================
+  ==================================*/
+
+  @mixin triangle-up {
+    content: '';
+    position: absolute;
+    left: -7px;
+    bottom: 2px;
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-bottom: 5px solid rgb(168, 137, 233);
+  }
+  
+  @mixin triangle-down {
+    content: '';
+    position: absolute;
+    left: -7px;
+    bottom: 3px;
+    width: 0;
+    height: 0;
+    border-left: 3px solid transparent;
+    border-right: 3px solid transparent;
+    border-top: 5px solid rgb(253, 86, 112);
+  }
+

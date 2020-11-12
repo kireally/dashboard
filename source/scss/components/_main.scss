@@ -25,6 +25,10 @@
         width: 100%;
     }
 
+    /*Main__top-container =============
+    ==================================*/
+
+
     &__top-container {
         display: flex;
 
@@ -34,20 +38,14 @@
         }
     }
 
-    &__bottom-container {
-        display: flex;
-
-        @include little-screen {
-            @include flexible(column, flex-start, center);
-            width: 100%;
-        }
-    }
+    /*Main__monthly-progress ==========
+    ==================================*/
 
     &__monthly-progress {
         @include flexible(row, space-between, flex-start);
         flex-grow: 10;
         flex-wrap: wrap;
-        
+
         width: 400px;
         height: 266px;
         background-color: rgb(255, 255, 255);
@@ -89,6 +87,9 @@
         margin-left: 30px;
     }
 
+    /*Main__revenue ==================
+    ==================================*/
+
     &__revenue {
         @include flexible(column, space-between, center);
         width: 264px;
@@ -103,4 +104,230 @@
     &__revenue-amount {
         padding-bottom: 30px;
     }
+
+    /*Main__bottom-container ==========
+    ==================================*/
+
+    &__bottom-container {
+        display: flex;
+
+        @include middle-screen {
+            @include flexible(column, flex-start, center);
+            width: 100%;
+        }
+
+        @include little-screen {
+            @include flexible(column, flex-start, center);
+            width: 100%;
+        }
+    }
+
+    /*Main__feedback =================
+    ==================================*/
+
+    &__feedback {
+        max-width: 467px;
+        width: 100%;
+        height: 508px;
+        background-color: rgb(255, 255, 255);
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        @include middle-screen {
+            max-width: 1000px;
+            width: 90%;
+        }
+
+        // @include little-screen {
+        //     max-width: 768px;
+        //     width: 90%;
+        // }
+    }
+
+    &__comment-container {
+        display: flex;
+        margin-top: 40px;
+        padding: 0 30px;
+
+        @include little-screen {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__user-photo {
+        width: 43px;
+        height: 43px;
+    }
+
+    &__user-time {
+        @include primary-font;
+        font-size: 8px;
+    }
+
+    &__comment-user {
+        margin-right: 20px;
+    }
+
+    &__comment {
+        display: block;
+        width: 316px;
+        height: 84px;
+        padding: 20px;
+        margin-bottom: 20px;
+
+        @include primary-font;
+        color: rgb(119, 119, 119);
+        border: 1px solid $border-color;
+        background-color: rgb(252, 252, 252);
+        box-sizing: border-box;
+    }
+
+    &__comment-name {
+        @include name-font;
+    }
+
+    &__comment--primary {
+        width: 345px;
+    }
+
+    &__more-comments {
+        position: relative;
+        left: 25px;
+    }
+
+    &__more-comments::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -13px;
+        width: 4px;
+        height: 187px;
+        background-color: $border-color;
+    }
+
+    /*Main__task-menu =================
+    ==================================*/
+
+    &__task-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /*Main__tasks ====================
+    ==================================*/
+
+    &__tasks {
+        width: 501px;
+        height: 245px;
+        background-color: rgb(255, 255, 255);
+
+        @include middle-screen {
+            max-width: 1000px;
+            width: 90%;
+        }
+    }
+
+    &__task-list {
+        margin-top: 20px;
+    }
+
+    &__task-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 30px;
+        border: 1px solid $border-color;
+    }
+
+    &__task-checkbox {
+        width: 17px;
+        height: 17px;
+    }
+
+    &__task {
+        @include name-font;
+        color: $main-gradient-color;
+    }
+
+    &__task-description {
+        @include primary-font;
+    }
+
+    &__task-time {
+        position: relative;
+        font-size: $primary-text;
+        font-weight: 700;
+        color: rgb(156, 156, 156);
+    }
+
+    &__task-time::before {
+        content: '';
+        position: absolute;
+        left: -10px;
+        top: 0;
+        background: url(../img/main/clock.png) no-repeat;
+    }
+
+    /*Main__progress-shipments ========
+    ==================================*/
+
+    &__progress-shipments {
+        display: flex;
+
+        @include little-screen {
+            flex-direction: column;
+        }
+    }
+
+    /*Main__progress =================
+    ==================================*/
+
+    &__progress {
+        @include flexible(column,space-between,center);
+        width: 241px;
+        height: 245px;
+        background: url(../img/main/progress.png) rgb(255, 255, 255) no-repeat center;
+        
+        @include little-screen {
+            max-width: 768px;
+            width: 90%;
+        }
+    }
+
+    &__progress-price {
+        @include amount-font;
+        color: rgb(133, 73, 181);
+    }
+
+    &__progress-amount {
+        padding-bottom: 30px;
+        text-align: center;
+    }
+
+    /*Main__shipments =================
+    ==================================*/
+
+    &__shipments {
+        @include flexible(column, space-between, center);
+        width: 241px;
+        height: 245px;
+        background: url(../img/main/shipment.png) rgb(255, 255, 255) no-repeat center;
+        
+        @include little-screen {
+            max-width: 768px;
+            width: 90%;
+        }
+    }
+
+    &__shipments-stats  {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 30px;
+    }
+
+    &__shipments-amount {
+        @include amount-font;
+    }
+
 }

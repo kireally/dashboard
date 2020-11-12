@@ -730,6 +730,26 @@ a {
   padding: 10px;
   background-color: #ebebeb;
   box-sizing: border-box;
+  /*Main__top-container =============
+    ==================================*/
+  /*Main__monthly-progress ==========
+    ==================================*/
+  /*Main__revenue ==================
+    ==================================*/
+  /*Main__bottom-container ==========
+    ==================================*/
+  /*Main__feedback =================
+    ==================================*/
+  /*Main__task-menu =================
+    ==================================*/
+  /*Main__tasks ====================
+    ==================================*/
+  /*Main__progress-shipments ========
+    ==================================*/
+  /*Main__progress =================
+    ==================================*/
+  /*Main__shipments =================
+    ==================================*/
 }
 
 @media (max-width: 768px) {
@@ -748,20 +768,6 @@ a {
 
 @media (max-width: 768px) {
   .main__top-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-  }
-}
-
-.main__bottom-container {
-  display: flex;
-}
-
-@media (max-width: 768px) {
-  .main__bottom-container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -842,4 +848,244 @@ a {
 
 .main__revenue-amount {
   padding-bottom: 30px;
+}
+
+.main__bottom-container {
+  display: flex;
+}
+
+@media (max-width: 1000px) {
+  .main__bottom-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main__bottom-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.main__feedback {
+  max-width: 467px;
+  width: 100%;
+  height: 508px;
+  background-color: white;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+@media (max-width: 1000px) {
+  .main__feedback {
+    max-width: 1000px;
+    width: 90%;
+  }
+}
+
+.main__comment-container {
+  display: flex;
+  margin-top: 40px;
+  padding: 0 30px;
+}
+
+@media (max-width: 768px) {
+  .main__comment-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.main__user-photo {
+  width: 43px;
+  height: 43px;
+}
+
+.main__user-time {
+  font-size: calc(11px + 0.1vw);
+  font-weight: 400;
+  color: #bfbfbf;
+  font-size: 8px;
+}
+
+.main__comment-user {
+  margin-right: 20px;
+}
+
+.main__comment {
+  display: block;
+  width: 316px;
+  height: 84px;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-size: calc(11px + 0.1vw);
+  font-weight: 400;
+  color: #bfbfbf;
+  color: #777777;
+  border: 1px solid #f1f1f1;
+  background-color: #fcfcfc;
+  box-sizing: border-box;
+}
+
+.main__comment-name {
+  font-size: calc(11px + 0.15vw);
+  font-weight: 700;
+  color: #767676;
+}
+
+.main__comment--primary {
+  width: 345px;
+}
+
+.main__more-comments {
+  position: relative;
+  left: 25px;
+}
+
+.main__more-comments::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -13px;
+  width: 4px;
+  height: 187px;
+  background-color: #f1f1f1;
+}
+
+.main__task-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.main__tasks {
+  width: 501px;
+  height: 245px;
+  background-color: white;
+}
+
+@media (max-width: 1000px) {
+  .main__tasks {
+    max-width: 1000px;
+    width: 90%;
+  }
+}
+
+.main__task-list {
+  margin-top: 20px;
+}
+
+.main__task-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  border: 1px solid #f1f1f1;
+}
+
+.main__task-checkbox {
+  width: 17px;
+  height: 17px;
+}
+
+.main__task {
+  font-size: calc(11px + 0.15vw);
+  font-weight: 700;
+  color: #767676;
+  color: #e0425b;
+}
+
+.main__task-description {
+  font-size: calc(11px + 0.1vw);
+  font-weight: 400;
+  color: #bfbfbf;
+}
+
+.main__task-time {
+  position: relative;
+  font-size: calc(11px + 0.1vw);
+  font-weight: 700;
+  color: #9c9c9c;
+}
+
+.main__task-time::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 0;
+  background: url(../img/main/clock.png) no-repeat;
+}
+
+.main__progress-shipments {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .main__progress-shipments {
+    flex-direction: column;
+  }
+}
+
+.main__progress {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 241px;
+  height: 245px;
+  background: url(../img/main/progress.png) white no-repeat center;
+}
+
+@media (max-width: 768px) {
+  .main__progress {
+    max-width: 768px;
+    width: 90%;
+  }
+}
+
+.main__progress-price {
+  font-size: calc(16px + 0.4vw);
+  font-weight: 700;
+  color: #e0425b;
+  color: #8549b5;
+}
+
+.main__progress-amount {
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.main__shipments {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 241px;
+  height: 245px;
+  background: url(../img/main/shipment.png) white no-repeat center;
+}
+
+@media (max-width: 768px) {
+  .main__shipments {
+    max-width: 768px;
+    width: 90%;
+  }
+}
+
+.main__shipments-stats {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 30px;
+}
+
+.main__shipments-amount {
+  font-size: calc(16px + 0.4vw);
+  font-weight: 700;
+  color: #e0425b;
 }

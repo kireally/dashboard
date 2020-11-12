@@ -1,3 +1,29 @@
+/*Fonts ==========================
+==================================*/
+@mixin name-font {
+    font-size: $name-text;
+    font-weight: 700;
+    color: $title-color;
+  }
+  
+  @mixin primary-font {
+    font-size: $primary-text;
+    font-weight: 400;
+    color: $primary-color;
+  }
+  
+  @mixin title-font {
+    font-size: $title-text;
+    font-weight: 700;
+    color: $title-color;
+  }
+  
+  @mixin amount-font {
+    font-size: $amount-text;
+    font-weight: 700;
+    color: $main-gradient-color;
+  }
+
 /*Media queries ==================
  ==================================*/
   
@@ -17,4 +43,14 @@
     @media (max-width: 1200px) { 
       @content; 
     }
+  }
+
+    /*Flex  ==========================
+  ==================================*/
+
+@mixin flexible($direction, $justify-content, $align-items) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
   }

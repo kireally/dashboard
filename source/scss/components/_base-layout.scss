@@ -1,0 +1,12 @@
+.wrapper {
+    display: flex;
+    max-width: 1366px;
+    margin: 0 auto;
+    font-family: 'Lato', sans-serif;
+}
+
+.base-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}

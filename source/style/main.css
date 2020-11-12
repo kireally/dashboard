@@ -719,6 +719,14 @@ a {
   padding: 30px 0 0 30px;
 }
 
+@media (max-width: 768px) {
+  .title {
+    padding-left: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
 .title--center {
   padding-left: 0;
   text-align: center;
@@ -730,8 +738,6 @@ a {
   padding: 10px;
   background-color: #ebebeb;
   box-sizing: border-box;
-  /*Main__top-container =============
-    ==================================*/
   /*Main__monthly-progress ==========
     ==================================*/
   /*Main__revenue ==================
@@ -919,10 +925,15 @@ a {
   margin-right: 20px;
 }
 
+@media (max-width: 768px) {
+  .main__comment-user {
+    margin: 0 0 10px 0;
+  }
+}
+
 .main__comment {
   display: block;
   width: 316px;
-  height: 84px;
   padding: 20px;
   margin-bottom: 20px;
   font-size: calc(11px + 0.1vw);
@@ -934,6 +945,18 @@ a {
   box-sizing: border-box;
 }
 
+@media (max-width: 1000px) {
+  .main__comment {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main__comment {
+    width: 80%;
+  }
+}
+
 .main__comment-name {
   font-size: calc(11px + 0.15vw);
   font-weight: 700;
@@ -942,6 +965,12 @@ a {
 
 .main__comment--primary {
   width: 345px;
+}
+
+@media (max-width: 1000px) {
+  .main__comment--primary {
+    width: 85%;
+  }
 }
 
 .main__more-comments {
@@ -969,12 +998,14 @@ a {
   width: 501px;
   height: 245px;
   background-color: white;
+  overflow-y: auto;
 }
 
 @media (max-width: 1000px) {
   .main__tasks {
     max-width: 1000px;
     width: 90%;
+    margin: 10px auto;
   }
 }
 
@@ -982,11 +1013,22 @@ a {
   margin-top: 20px;
 }
 
+.main__task-list:last-child {
+  margin-top: 0;
+}
+
 .main__task-item {
   display: flex;
   justify-content: space-between;
   padding: 10px 30px;
   border: 1px solid #f1f1f1;
+}
+
+@media (max-width: 768px) {
+  .main__task-item {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 }
 
 .main__task-checkbox {
@@ -1005,6 +1047,13 @@ a {
   font-size: calc(11px + 0.1vw);
   font-weight: 400;
   color: #bfbfbf;
+}
+
+@media (max-width: 768px) {
+  .main__task-description {
+    order: 2;
+    margin-top: 10px;
+  }
 }
 
 .main__task-time {
@@ -1029,6 +1078,7 @@ a {
 @media (max-width: 768px) {
   .main__progress-shipments {
     flex-direction: column;
+    align-items: center;
   }
 }
 

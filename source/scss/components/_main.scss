@@ -6,6 +6,12 @@
 .title {
     @include title-font;
     padding: 30px 0 0 30px;
+
+    @include little-screen {
+        padding-left: 0;
+        margin: 0 auto;
+        text-align: center;
+    }
 }
 
 .title--center {
@@ -24,10 +30,6 @@
         @include flexible(column, flex-start, center);
         width: 100%;
     }
-
-    /*Main__top-container =============
-    ==================================*/
-
 
     &__top-container {
         display: flex;
@@ -137,11 +139,6 @@
             max-width: 1000px;
             width: 90%;
         }
-
-        // @include little-screen {
-        //     max-width: 768px;
-        //     width: 90%;
-        // }
     }
 
     &__comment-container {
@@ -167,12 +164,16 @@
 
     &__comment-user {
         margin-right: 20px;
+
+        @include little-screen {
+            margin: 0 0 10px 0;
+        }
     }
 
     &__comment {
         display: block;
         width: 316px;
-        height: 84px;
+        // height: 84px;
         padding: 20px;
         margin-bottom: 20px;
 
@@ -181,6 +182,14 @@
         border: 1px solid $border-color;
         background-color: rgb(252, 252, 252);
         box-sizing: border-box;
+
+        @include middle-screen {
+            width: 70%;
+        }
+
+        @include little-screen {
+            width: 80%;
+        }
     }
 
     &__comment-name {
@@ -189,6 +198,10 @@
 
     &__comment--primary {
         width: 345px;
+
+        @include middle-screen {
+            width: 85%;
+        }
     }
 
     &__more-comments {
@@ -222,10 +235,12 @@
         width: 501px;
         height: 245px;
         background-color: rgb(255, 255, 255);
+        overflow-y: auto;
 
         @include middle-screen {
             max-width: 1000px;
             width: 90%;
+            margin: 10px auto;
         }
     }
 
@@ -233,11 +248,20 @@
         margin-top: 20px;
     }
 
+    &__task-list:last-child {
+        margin-top: 0;
+    }
+
     &__task-item {
         display: flex;
         justify-content: space-between;
         padding: 10px 30px;
         border: 1px solid $border-color;
+
+        @include little-screen {
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
     }
 
     &__task-checkbox {
@@ -252,6 +276,11 @@
 
     &__task-description {
         @include primary-font;
+
+        @include little-screen {
+            order: 2;
+            margin-top: 10px;
+        }
     }
 
     &__task-time {
@@ -277,6 +306,7 @@
 
         @include little-screen {
             flex-direction: column;
+            align-items: center;
         }
     }
 

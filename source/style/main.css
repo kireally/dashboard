@@ -388,6 +388,12 @@ a {
   display: flex;
 }
 
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
 .navigation {
   position: sticky;
   left: 0;
@@ -1138,4 +1144,110 @@ a {
   font-size: calc(16px + 0.4vw);
   font-weight: 700;
   color: #e0425b;
+}
+
+.aside {
+  width: 273px;
+  background-color: white;
+}
+
+@media (max-width: 1200px) {
+  .aside {
+    flex-direction: column;
+    margin: 0 auto;
+    width: 80vw;
+  }
+}
+
+.aside__nav {
+  display: flex;
+  width: 100%;
+  height: 48px;
+  background: linear-gradient(to right, #e0425b, #db5c46);
+}
+
+.aside__nav-item {
+  position: relative;
+  display: block;
+  width: 33.3%;
+  height: 48px;
+}
+
+.aside__nav-item:nth-child(1) {
+  background: url(../img/aside/users.png) no-repeat center;
+}
+
+.aside__nav-item:nth-child(2) {
+  background: url(../img/aside/chat.png) no-repeat center;
+}
+
+.aside__nav-item:nth-child(3) {
+  background: url(../img/aside/like.png) no-repeat center;
+}
+
+.aside__nav-item:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: calc(50% - calc(7px + 0.15vw));
+  width: 0;
+  height: 0;
+  border-left: calc(7px + 0.15vw) solid transparent;
+  border-right: calc(7px + 0.15vw) solid transparent;
+  border-top: 8px solid #db5c46;
+}
+
+.aside__contacts-list {
+  height: 516px;
+  padding: 0 20px;
+  overflow-y: auto;
+}
+
+.aside__contacts-item {
+  display: flex;
+  padding: 20px 0;
+  border-bottom: 2px solid #f1f1f1;
+  background: url(../img/aside/grey-chat.png) no-repeat center right 0;
+}
+
+.aside__contacts-img {
+  width: 42px;
+  height: 42px;
+  margin-right: 15px;
+}
+
+.aside__contacts-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.aside__contacts-name {
+  font-size: calc(11px + 0.15vw);
+  font-weight: 700;
+  color: #767676;
+  margin-bottom: 0.8em;
+}
+
+.aside__contacts-position {
+  font-size: calc(11px + 0.1vw);
+  font-weight: 400;
+  color: #bfbfbf;
+  font-size: 10px;
+}
+
+.aside__search {
+  padding: 17px 20px 20px 18px;
+  background: url(../img/aside/edit.png) no-repeat right center, url(../img/aside/search.png) no-repeat right 30px center;
+  border: 2px solid #f1f1f1;
+  border-right: none;
+}
+
+.aside__input {
+  width: 160px;
+  font-size: 10px;
+  font-family: 'Lato',sans-serif;
+  border: none;
+  border-bottom: 2px solid #f1f1f1;
 }

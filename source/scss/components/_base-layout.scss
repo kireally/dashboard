@@ -14,7 +14,7 @@
 .container {
     display: flex;
 
-    // @include big-screen {
-    //     flex-direction: column;
-    // }
+    @include big-screen {
+        flex-direction: column;
+    }
 }

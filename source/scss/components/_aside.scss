@@ -1,0 +1,97 @@
+.aside {
+    width: 273px;
+    background-color: rgb(255, 255, 255);
+
+    @include big-screen {
+        flex-direction: column;
+        margin: 0 auto;
+        width: 80vw;
+    }
+
+    &__nav {
+        display: flex;
+        width: 100%;
+        height: 48px;
+        background: linear-gradient(to right, $main-gradient-color, $secondary-gradient-color);
+    }
+
+    &__nav-item {
+        position: relative;
+        display: block;
+        width: 33.3%;
+        height: 48px;
+    }
+
+    &__nav-item:nth-child(1){
+        background: url(../img/aside/users.png) no-repeat center;
+    }
+
+    &__nav-item:nth-child(2){
+        background: url(../img/aside/chat.png) no-repeat center;
+    }
+
+    &__nav-item:nth-child(3){
+        background: url(../img/aside/like.png) no-repeat center;
+    }
+
+    &__nav-item:hover::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: calc(50% - calc(7px + 0.15vw));
+        
+        width: 0;
+        height: 0;
+        border-left: calc(7px + 0.15vw) solid transparent;
+        border-right: calc(7px + 0.15vw) solid transparent;
+        border-top: 8px solid $secondary-gradient-color;
+    }
+
+    &__contacts-list {
+        height: 516px;
+        padding: 0 20px;
+        overflow-y: auto;
+    }
+
+    &__contacts-item {
+        display: flex;
+        padding: 20px 0;
+        border-bottom: 2px solid $border-color;
+        background: url(../img/aside/grey-chat.png) no-repeat center right 0;
+    }
+
+    &__contacts-img {
+        width: 42px;
+        height: 42px;
+        margin-right: 15px;
+    }
+
+    &__contacts-text {
+        @include flexible(column, center, flex-start);
+    }
+
+    &__contacts-name {
+        @include name-font;
+        margin-bottom: 0.8em;
+    }
+
+    &__contacts-position {
+        @include primary-font;
+        font-size: $position-text;
+    }
+
+    &__search {
+        padding: 17px 20px 20px 18px;
+        background: url(../img/aside/edit.png) no-repeat right center, url(../img/aside/search.png) no-repeat right 30px center; 
+        border: 2px solid $border-color;
+        border-right: none;
+    }
+
+    &__input {
+        width: 160px;
+        font-size: 10px;
+        font-family: 'Lato',sans-serif;
+        border: none;
+        border-bottom: 2px solid $border-color;
+    }
+}

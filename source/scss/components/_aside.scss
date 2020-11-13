@@ -5,7 +5,7 @@
     @include big-screen {
         flex-direction: column;
         margin: 0 auto;
-        width: 80vw;
+        width: calc(90% - 20px);
     }
 
     &__nav {
@@ -85,6 +85,7 @@
         background: url(../img/aside/edit.png) no-repeat right center, url(../img/aside/search.png) no-repeat right 30px center; 
         border: 2px solid $border-color;
         border-right: none;
+        border-left: none;
     }
 
     &__input {

@@ -4,11 +4,15 @@
     background-color:rgb(255, 255, 255);
     box-sizing: border-box;
 
-    // @include big-screen {
-    //     flex-direction: column;
-    //     margin: 0 auto;
-    //     width: 80%;
-    // }
+    @include big-screen {
+        flex-direction: column;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    @include little-screen {
+        width: 273px;
+    }
 
     &__links {
         display: flex;
@@ -27,6 +31,14 @@
 
     &__link:nth-child(n + 4) {
         margin-top: 16px;
+
+        @include big-screen {
+            margin-top: 0;
+        }
+
+        @include little-screen {
+            margin-top: 16px;
+        }
     }
 
     &__link:nth-child(1) {

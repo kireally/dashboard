@@ -1155,7 +1155,7 @@ a {
   .aside {
     flex-direction: column;
     margin: 0 auto;
-    width: 80vw;
+    width: calc(90% - 20px);
   }
 }
 
@@ -1242,6 +1242,7 @@ a {
   background: url(../img/aside/edit.png) no-repeat right center, url(../img/aside/search.png) no-repeat right 30px center;
   border: 2px solid #f1f1f1;
   border-right: none;
+  border-left: none;
 }
 
 .aside__input {
@@ -1257,6 +1258,20 @@ a {
   padding: 0 40px 33px;
   background-color: white;
   box-sizing: border-box;
+}
+
+@media (max-width: 1200px) {
+  .footer {
+    flex-direction: column;
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    width: 273px;
+  }
 }
 
 .footer__links {
@@ -1276,6 +1291,18 @@ a {
 
 .footer__link:nth-child(n + 4) {
   margin-top: 16px;
+}
+
+@media (max-width: 1200px) {
+  .footer__link:nth-child(n + 4) {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__link:nth-child(n + 4) {
+    margin-top: 16px;
+  }
 }
 
 .footer__link:nth-child(1) {

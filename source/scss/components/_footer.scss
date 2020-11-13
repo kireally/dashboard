@@ -1,0 +1,55 @@
+.footer {
+    width: 273px;
+    padding: 0 40px 33px;
+    background-color:rgb(255, 255, 255);
+    box-sizing: border-box;
+
+    // @include big-screen {
+    //     flex-direction: column;
+    //     margin: 0 auto;
+    //     width: 80%;
+    // }
+
+    &__links {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+
+    &__link {
+        display: block;
+        width: 55px;
+        height: 55px;
+        background-color: salmon;
+        border-radius: 35%;
+    }
+
+    &__link:nth-child(n + 4) {
+        margin-top: 16px;
+    }
+
+    &__link:nth-child(1) {
+        background: url(../img/footer/rdio.png) no-repeat center, linear-gradient(to bottom, rgb(196, 144, 229), rgb(136, 120, 193));
+    }
+
+    &__link:nth-child(2) {
+        background: url(../img/footer/css-3.png) no-repeat center, linear-gradient(to bottom, rgb(185, 244, 223), rgb(108, 203, 203));
+    }
+
+    &__link:nth-child(3) {
+        background: url(../img/footer/deviantart.png) no-repeat center, linear-gradient(to bottom, rgb(247, 206, 177), rgb(187, 124, 129));
+    }
+
+    &__link:nth-child(4) {
+        background: url(../img/footer/xing.png) no-repeat center, linear-gradient(to bottom, rgb(154, 166, 231), rgb(146, 94, 187));
+    }
+
+    &__link:nth-child(5) {
+        background: url(../img/footer/vimeo.png) no-repeat center, linear-gradient(to bottom, rgb(107, 214, 229), rgb(80, 145, 230));
+    }
+
+    &__link:nth-child(6) {
+        background: url(../img/footer/vk.png) no-repeat center, linear-gradient(to bottom, rgb(252, 222, 153), rgb(245, 144, 131));
+    }
+}

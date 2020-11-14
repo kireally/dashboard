@@ -85,7 +85,7 @@
 
     &__search {
         @include flexible(row, center, center);
-        flex: auto;
+            flex: auto;
 
         @include little-screen {
             order: 2;
@@ -99,6 +99,7 @@
         height: 34px;
         padding-left: 1em;
         margin: 0 10px;
+        
         font-family: 'Lato', sans-serif;
         font-size: 12px;
         border: 1px solid $border-color;

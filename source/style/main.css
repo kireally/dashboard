@@ -1323,8 +1323,8 @@ a {
 @media (max-width: 1200px) {
   .footer {
     flex-direction: column;
-    margin: 0 auto;
     width: 90%;
+    margin: 0 auto;
   }
 }
 
@@ -1346,7 +1346,7 @@ a {
 @media (max-width: 768px) {
   .footer__links {
     width: 200px;
-    margin: 30px auto;
+    margin: 30px auto 0;
   }
 }
 

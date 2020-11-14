@@ -11,7 +11,9 @@
     }
 
     @include little-screen {
-        width: 273px;
+        width: calc(90% - 20px);
+        margin-top: 20px;
+        box-shadow: 0 0 10px 5px rgb(207, 206, 206);
     }
 
     &__links {
@@ -19,6 +21,11 @@
         justify-content: space-between;
         flex-wrap: wrap;
         margin-top: 30px;
+
+        @include little-screen {
+            width: 200px;
+            margin: 30px auto;
+        }
     }
 
     &__link {

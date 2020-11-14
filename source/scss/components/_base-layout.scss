@@ -18,3 +18,9 @@
         flex-direction: column;
     }
 }
+
+.socials {
+    @include little-screen {
+        background-color: rgb(235, 235, 235);
+    }
+}

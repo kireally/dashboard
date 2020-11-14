@@ -25,7 +25,14 @@
         color: $main-gradient-color;
     }
 
-    &__item {
+    &__items {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: calc(100vh - 70px);
+    }
+
+    &__item, &__button {
         position: relative;
         height: 70px;
     }
@@ -65,7 +72,7 @@
     background: url(../img/nav/information.png) no-repeat center center;
     }
 
-    &__item:nth-child(6) {
+    &__button {
         background: url(../img/nav/power-button.png) no-repeat center center;
     }
 

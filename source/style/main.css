@@ -424,7 +424,14 @@ a {
   color: #e0425b;
 }
 
-.navigation__item {
+.navigation__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100vh - 70px);
+}
+
+.navigation__item, .navigation__button {
   position: relative;
   height: 70px;
 }
@@ -462,7 +469,7 @@ a {
   background: url(../img/nav/information.png) no-repeat center center;
 }
 
-.navigation__item:nth-child(6) {
+.navigation__button {
   background: url(../img/nav/power-button.png) no-repeat center center;
 }
 

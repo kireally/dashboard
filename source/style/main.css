@@ -1039,6 +1039,8 @@ a {
   .main__task-item {
     justify-content: space-around;
     flex-wrap: wrap;
+    border-right: none;
+    width: 80%;
   }
 }
 

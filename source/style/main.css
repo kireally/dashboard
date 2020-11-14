@@ -1019,10 +1019,6 @@ a {
   margin-top: 20px;
 }
 
-.main__task-list:last-child {
-  margin-top: 0;
-}
-
 .main__task-item {
   display: flex;
   flex-direction: row;
